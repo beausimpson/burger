@@ -7,12 +7,14 @@ var burger = {
             callback(result)
         })
     },
-    insertOne: function(column, value, callback) {
-        orm.insertOne("burgers", column, value, function(result) {
+    insertOne: function(value, callback) {
+        console.log(value)
+        orm.insertOne("burgers", "burger_name", value, function(result) {
             callback(result)
         })
     },
     updateOne: function(value, condition, callback) {
+        console.log(value, condition)
         orm.updateOne("burgers", value, condition, function(result) {
             callback(result)
         })

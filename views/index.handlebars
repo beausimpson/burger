@@ -6,21 +6,33 @@
 </div>
 <div class="container">
     <div class="row">
+        <div class="col-md-12">
+            <form class="add-burger-form" action="/api/burgers" method="post">
+                <input type="text" id="burger-input" name="burger_name"><br>
+                <button id="burger-button" type="submit">Add Burger <i class="fas fa-plus"></i></button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-6">
             <h3>Burgers</h3>
             {{#each burgers}}
-            <p>
-                {{burger_name}}
+
+            <p>{{burger_name}}
+                <button class="change-devour" data-id="{{this.id}}" data-newdevour="{{devoured}}">DEVOUR! <i class="fas fa-utensils"></i></button>
             </p>
+
             {{/each}}
         </div>
         <div class="col-md-6">
             <h3>Devoured</h3>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-
+            <p>
+                {{#each burgers}}
+                {{#if devoured}}
+                {{burger_name devoured=true}}
+                {{/if}}
+                {{/each}}
+            </p>
         </div>
     </div>
 </div>
