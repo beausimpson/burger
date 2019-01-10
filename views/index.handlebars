@@ -19,7 +19,7 @@
             {{#each burgers}}
 
             <p>{{burger_name}}
-                <button class="change-devour" data-id="{{this.id}}" data-newdevour="{{devoured}}">DEVOUR! <i class="fas fa-utensils"></i></button>
+                <button class="change-devour" id="devour-button" data-id="{{this.id}}" data-devour="{{devoured}}">DEVOUR! <i class="fas fa-utensils"></i></button>
             </p>
 
             {{/each}}
