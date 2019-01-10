@@ -7,7 +7,7 @@ $(function () {
         var devourState = {
             devoured: devourStatus
         };
-
+        
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: devourState
