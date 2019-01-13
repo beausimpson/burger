@@ -2,17 +2,17 @@ $(function () {
     $("#devour-button").on("click", function(event) {
         var id = $(this).data("id");
 
-        var devourStatus = $(this).data("devour");
+        // var devourStatus = $(this).data("devour");
 
         var devourState = {
-            devoured: devourStatus
+            devoured: true
         };
         
-        $.ajax("/api/burgers/" + id, {
+        $.ajax("/api/burgers/", {
             type: "PUT",
-            data: devourState
+            // data: id
         }).then(function () {
-            console.log("click works")
+            console.log("put works")
             location.reload();
 
         })
