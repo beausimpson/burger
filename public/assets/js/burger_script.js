@@ -8,9 +8,9 @@ $(function () {
             devoured: true
         };
         
-        $.ajax("/api/burgers/", {
+        $.ajax("/api/burgers/" + id, {
             type: "PUT",
-            // data: id
+            data: id
         }).then(function () {
             console.log("put works")
             location.reload();

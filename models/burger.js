@@ -14,7 +14,9 @@ var burger = {
         })
     },
     updateOne: function(value, condition, callback) {
+
         console.log(value, condition)
+        
         orm.updateOne("burgers", value, condition, function(result) {
             callback(result)
         })
