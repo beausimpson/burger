@@ -30,7 +30,8 @@ router.put("/api/burgers/:id", function (req, res) {
         devoured: true
     }, condition, function (result) {
         console.log(req.params.id)
-        res.redirect("/")
+        // res.redirect("/")
+        res.status(200).end();
     })
 });
 

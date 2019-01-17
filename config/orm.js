@@ -57,6 +57,8 @@ var orm = {
         });
     },
     updateOne: function (table, value, condition, callback) {
+        console.log(table, objToSql(value), condition)
+
         var queryString = "UPDATE " + table + " SET " +objToSql(value) + " WHERE " + condition;
 
         connection.query(queryString, function (err, result) {
