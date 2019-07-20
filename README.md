@@ -1,5 +1,5 @@
 # Eat-Da-Burger
-[Eat-Da-Burger](https://burger-beausimpson.herokuapp.com/)
+[Deployed Site](https://burger-beausimpson.herokuapp.com/)
 ## Built by Beau Simpson
 
 **Full Stack Web Application**
